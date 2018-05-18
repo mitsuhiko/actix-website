@@ -1,0 +1,63 @@
+{{ partial "header" . }}
+
+<div class="jumbotron">
+  <div class="tk-jumbotron">
+    <img src="/img/logo-large.png" class="align-middle tk-logo" alt="">
+    <p class="lead">A powerful actor system and the most fun web framework for Rust.</p>
+    <a href="{{ ref . "docs/getting-started/hello-world.md" }}" class="btn call-to-action" role="button" aria-pressed="true">Get Started</a>
+  </div>
+</div>
+
+<div class="container tk-home">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="tk-features">
+        <h2>
+          <i class="fa fa-shield" aria-hidden="true"></i>
+          Type Safe
+        </h2>
+        <p>Forget about stringly typed objects, from request to response, everything has types.</p>
+
+        <h2>
+          <i class="fa fa-battery-full" aria-hidden="true"></i>
+          Feature Rich
+        </h2>
+        <p>Actix provides a lot of features out of box. WebSockets, HTTP/2, pipelining etc.</p>
+
+        <h2>
+          <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+          Extensible
+        </h2>
+        <p>Easily create your own libraries that any Actix application can use.</p>
+
+        <h2>
+          <i class="fa fa-dashboard" aria-hidden="true"></i>
+          Blazingly Fast
+        </h2>
+        <p>Actix is blazingly fast. Check yourself.</p>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <div class="tk-content">
+        <pre><code>extern crate actix_web;
+use actix_web::{server, App, HttpRequest};
+
+fn index(req: HttpRequest) -> &'static str {
+    "Hello world!"
+}
+
+fn main() {
+    server::new(
+        || App::new()
+            .resource("/", |r| r.f(index)))
+        .bind("127.0.0.1:8088")
+            .expect("Can not bind to 127.0.0.1:8088")
+        .run();
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ partial "footer" . }}

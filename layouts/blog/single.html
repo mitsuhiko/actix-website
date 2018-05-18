@@ -1,0 +1,40 @@
+{{ partial "header" . }}
+{{ $currentURL := .URL }}
+
+<div class="tk-pageheader">
+  <div class="container">
+    <h1 class="display-4">{{ .Title }}</h1>
+    <p class="lead">{{ .Description }}</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+
+      <nav class="leftnav">
+        <div class="" id="">
+          <ul class="nav">
+            {{ range .Site.Menus.blog }}
+            <li class="active">
+              <a href="{{ .URL }}" {{ if not (eq $currentURL .URL) }}class="text-muted"{{ end }}>{{ .Name }}</a>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+    <div class="col-md-9">
+      <div class="tk-content">
+        {{ .Content }}
+        <!-- Yes, we have to use *Prev* to get the next content, because the
+             weights are sorted inversely to how they are actually displayed... -->
+        {{ with .PrevInSection }}<div class="tk-next"><b>Next up</b>: <a href = {{ .URL }}>{{ end }}
+        {{ with .PrevInSection }} {{ .Title }}</a></div>{{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ partial "footer" . }}
