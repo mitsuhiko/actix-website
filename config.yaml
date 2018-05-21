@@ -1,0 +1,7 @@
+baseurl: 'https://actix.rs'
+title: 'actix'
+languageCode: 'en-us'
+canonifyURLs: true
+googleAnalytics: "UA-110322332-1"
+pygmentsUseClasses: true
+pygmentsCodeFences: true
