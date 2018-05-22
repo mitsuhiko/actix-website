@@ -1,5 +1,6 @@
 ---
 title: Documentation
+description: Guiding you through building apps with actix
 menu:
   docs_intro:
     name: Welcome
