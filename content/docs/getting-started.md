@@ -17,13 +17,12 @@ cargo new hello-world --bin
 cd hello-world
 ```
 
-Now, add actix and actix web as dependencies of your project by ensuring your Cargo.toml
+Now, add `actix-web` as dependencies of your project by ensuring your `Cargo.toml`
 contains the following:
 
 ```ini
 [dependencies]
-actix = "0.5"
-actix-web = "0.6"
+actix-web = "{{< actix-version "actix-web" >}}"
 ```
 
 In order to implement a web server, we first need to create a request handler.
@@ -62,3 +61,7 @@ fn main() {
 
 That's it! Now, compile and run the program with `cargo run`.
 Head over to ``http://localhost:8088/`` to see the results.
+
+If you want you can have an automatic reloading server during development
+that recompiles on demand.  To see how this can be accomplished have a look
+at the [autoreload pattern](../autoreload/).

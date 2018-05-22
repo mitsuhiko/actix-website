@@ -175,6 +175,20 @@ img {
   margin: 1rem 0rem;
 }
 
+.leftnav li a {
+  color: #888;
+}
+
+.leftnav li.active {
+  margin: -0.5rem 0 -.5rem -1rem;
+  padding: 0.5rem 0 0.5rem 1rem;
+  background: #dceaea;
+}
+
+.leftnav li.active a {
+  color: #156060;
+}
+
 .leftnav h5 {
   margin: 2rem 0 1rem 0;
 }
@@ -232,7 +246,7 @@ img {
 
 .jumbotron .lead {
   font-size: 1.5rem;
-  margin: 2rem 0;
+  margin: 2rem 0 0 0;
 }
 
 .actix-pageheader {
@@ -255,33 +269,6 @@ img {
   .actix-pageheader {
     padding: 2rem 0rem;
   }
-}
-
-.call-to-action {
-  color: #fff;
-  border-color: #fff;
-  padding: 0 2rem;
-  line-height: 3rem;
-  font-size: 1.25rem;
-  border-radius: 0.3rem;
-}
-
-.call-to-action:hover {
-  color: #438686;
-  background-color: #fff;
-  border-color: #fff;
-}
-
-.call-to-action:focus {
-  color: #479cea;
-  background-color: #fff;
-  border-color: #fff;
-}
-
-.call-to-action:active {
-  color: #479cea;
-  background-color: #fff;
-  border-color: #fff;
 }
 
 /*
@@ -357,11 +344,15 @@ p.uplink {
  *
  */
 
+code {
+  color: #006a70;
+}
+
 pre, code {
   font-family: 'Roboto Mono', monospace;
 }
 
-div.highlight pre {
+pre {
   display: block;
   overflow-x: auto;
   margin: 2rem 0rem;

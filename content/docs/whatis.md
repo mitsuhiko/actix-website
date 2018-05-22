@@ -4,7 +4,7 @@ menu: docs_intro
 weight: 100
 ---
 
-# A few Things
+# Actix is Multiple Things
 
 Actix is a few things.  The base of it is a powerful actor system for Rust on
 top of which the `actix-web` system is built.  This is what you are most likely

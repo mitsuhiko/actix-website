@@ -27,7 +27,7 @@ Release version:
 
 ```ini
 [dependencies]
-actix-web = "0.6"
+actix-web = "{{< actix-version "actix-web" >}}"
 ```
 
 Development version:

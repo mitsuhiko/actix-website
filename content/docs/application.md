@@ -6,13 +6,13 @@ weight: 140
 
 # Writing an Application
 
-Actix web provides various primitives to build web servers and applications with Rust.
+`actix-web` provides various primitives to build web servers and applications with Rust.
 It provides routing, middlewares, pre-processing of requests, post-processing of responses,
 websocket protocol handling, multipart streams, etc.
 
-All actix web servers are built around the `App` instance.
-It is used for registering routes for resources and middlewares.
-It also stores application state shared across all handlers within same application.
+All actix web servers are built around the `App` instance.  It is used for
+registering routes for resources and middlewares.  It also stores application
+state shared across all handlers within same application.
 
 Applications act as a namespace for all routes, i.e all routes for a specific application
 have the same url path prefix. The application prefix always contains a leading "/" slash.

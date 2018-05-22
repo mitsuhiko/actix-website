@@ -20,8 +20,8 @@
           <div>
             <ul class="nav">
               {{ range .Site.Menus.docs_intro }}
-              <li class="active">
-                <a href="{{ .URL }}" {{ if not (eq $currentURL .URL) }}class="text-muted"{{ end }}>{{ .Name }}</a>
+              <li{{ if eq $currentURL .URL }} class="active"{{ end }}>
+                <a href="{{ .URL }}">{{ .Name }}</a>
               </li>
               {{ end }}
             </ul>
@@ -31,8 +31,41 @@
           <div>
             <ul class="nav">
               {{ range .Site.Menus.docs_basics }}
-              <li class="active">
-                <a href="{{ .URL }}" {{ if not (eq $currentURL .URL) }}class="text-muted"{{ end }}>{{ .Name }}</a>
+              <li{{ if eq $currentURL .URL }} class="active"{{ end }}>
+                <a href="{{ .URL }}">{{ .Name }}</a>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+
+          <h5>Advanced</h5>
+          <div>
+            <ul class="nav">
+              {{ range .Site.Menus.docs_advanced }}
+              <li{{ if eq $currentURL .URL }} class="active"{{ end }}>
+                <a href="{{ .URL }}">{{ .Name }}</a>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+
+          <h5>Protocols</h5>
+          <div>
+            <ul class="nav">
+              {{ range .Site.Menus.docs_proto }}
+              <li{{ if eq $currentURL .URL }} class="active"{{ end }}>
+                <a href="{{ .URL }}">{{ .Name }}</a>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+
+          <h5>Patterns</h5>
+          <div>
+            <ul class="nav">
+              {{ range .Site.Menus.docs_patterns }}
+              <li{{ if eq $currentURL .URL }} class="active"{{ end }}>
+                <a href="{{ .URL }}">{{ .Name }}</a>
               </li>
               {{ end }}
             </ul>
@@ -41,8 +74,8 @@
           <h5>API Documentation</h5>
           <div>
             <ul class="nav">
-              <li class="active"><a href="https://docs.rs/actix" class="text-muted">actix <span class="fa fa-external-link"></span></a></li>
-              <li class="active"><a href="https://docs.rs/actix-web" class="text-muted">actix-web <span class="fa fa-external-link"></span></a></li>
+              <li><a href="https://docs.rs/actix">actix <span class="fa fa-external-link"></span></a></li>
+              <li><a href="https://docs.rs/actix-web">actix-web <span class="fa fa-external-link"></span></a></li>
             </ul>
           </div>
         </div>
